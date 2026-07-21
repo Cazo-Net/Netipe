@@ -17,7 +17,7 @@ Network Infrastructure Configuration Parser and Security Auditor
 ## Install
 
 ```bash
-go install github.com/Cazo-Net/Netipe/cmd/netpipe@latest
+go install github.com/Cazo-Net/NetPipe/cmd/netpipe@latest
 ```
 
 Make sure `~/go/bin` is in your `PATH`:
