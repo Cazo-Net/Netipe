@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Cazo-Net/netpipe/internal/model"
+	"github.com/Cazo-Net/Netipe/internal/model"
 )
 
 type Config struct {

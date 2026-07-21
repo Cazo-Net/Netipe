@@ -1,3 +1,3 @@
-module github.com/Cazo-Net/netpipe
+module github.com/Cazo-Net/Netipe
 
 go 1.26.5

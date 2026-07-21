@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Cazo-Net/netpipe/internal/model"
-	"github.com/Cazo-Net/netpipe/internal/parser"
-	"github.com/Cazo-Net/netpipe/internal/util"
+	"github.com/Cazo-Net/Netipe/internal/model"
+	"github.com/Cazo-Net/Netipe/internal/parser"
+	"github.com/Cazo-Net/Netipe/internal/util"
 )
 
 func init() {
