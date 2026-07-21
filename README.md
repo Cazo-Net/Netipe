@@ -20,12 +20,20 @@ Network Infrastructure Configuration Parser and Security Auditor
 go install github.com/Cazo-Net/Netipe/cmd/netpipe@latest
 ```
 
+Make sure `~/go/bin` is in your `PATH`:
+
+```bash
+export PATH=$PATH:~/go/bin
+echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc
+```
+
 Or build from source:
 
 ```bash
 git clone https://github.com/Cazo-Net/Netipe.git
-cd netpipe
+cd Netipe
 go build -o netpipe ./cmd/netpipe/
+sudo cp netpipe /usr/local/bin/
 ```
 
 ## Quick Start

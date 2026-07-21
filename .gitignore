@@ -1,25 +1,12 @@
-# Binaries
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+netpipe.exe
 netpipe
-
-# Test output
-test_*
-testresult*
-
-# Go workspace
-go.work
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-
-test-result.*
-
-*.exe
+*.test
+*.out
+*.cov
+testdata/*.html
+testdata/*.json
+testdata/*.xml
+# local build/test artifacts
+/build/
+/out/
+*.log
