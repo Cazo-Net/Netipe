@@ -1,0 +1,246 @@
+========================================================================
+  NETPIPE SECURITY AUDIT REPORT
+========================================================================
+
+Device:     Router1
+Type:       ios-router
+Version:    15.1
+Model:      
+Generated:  2026-07-21 18:37:27
+Tool:       NetPipe v1.0.0
+
+------------------------------------------------------------------------
+EXECUTIVE SUMMARY
+------------------------------------------------------------------------
+Critical:   4
+High:       5
+Medium:     15
+Low:        2
+Info:       1
+Total:      27
+
+------------------------------------------------------------------------
+SECURITY FINDINGS
+------------------------------------------------------------------------
+
+[Finding 1] Default Password Detected for '' (CRITICAL)
+ID:          PW-DEF-001
+Category:    Password Security
+Description: A default password is configured for user ''.
+Impact:      Default passwords are publicly known and provide no security.
+Recommend:   Set a strong, unique password for each user account.
+........................................................................
+
+[Finding 2] Dictionary-Based Password for '' (HIGH)
+ID:          PW-DICT-001
+Category:    Password Security
+Description: The password for user '' contains or matches a dictionary word.
+Impact:      Dictionary-based passwords can be cracked quickly with brute-force attacks.
+Recommend:   Use a random password with mixed case, numbers, and special characters.
+........................................................................
+
+[Finding 3] Weak Password for '' (MEDIUM)
+ID:          PW-WEAK-001
+Category:    Password Security
+Description: The password for user '' does not meet minimum strength requirements.
+Impact:      Weak passwords can be guessed or brute-forced.
+Recommend:   Set a password with minimum 8 characters, including upper/lowercase, numbers, and special characters.
+........................................................................
+
+[Finding 4] Default Password Detected for 'privilege' (CRITICAL)
+ID:          PW-DEF-001
+Category:    Password Security
+Description: A default password is configured for user 'privilege'.
+Impact:      Default passwords are publicly known and provide no security.
+Recommend:   Set a strong, unique password for each user account.
+........................................................................
+
+[Finding 5] Dictionary-Based Password for 'privilege' (HIGH)
+ID:          PW-DICT-001
+Category:    Password Security
+Description: The password for user 'privilege' contains or matches a dictionary word.
+Impact:      Dictionary-based passwords can be cracked quickly with brute-force attacks.
+Recommend:   Use a random password with mixed case, numbers, and special characters.
+........................................................................
+
+[Finding 6] Weak Password for 'privilege' (MEDIUM)
+ID:          PW-WEAK-001
+Category:    Password Security
+Description: The password for user 'privilege' does not meet minimum strength requirements.
+Impact:      Weak passwords can be guessed or brute-forced.
+Recommend:   Set a password with minimum 8 characters, including upper/lowercase, numbers, and special characters.
+........................................................................
+
+[Finding 7] Default Password Detected for 'privilege' (CRITICAL)
+ID:          PW-DEF-001
+Category:    Password Security
+Description: A default password is configured for user 'privilege'.
+Impact:      Default passwords are publicly known and provide no security.
+Recommend:   Set a strong, unique password for each user account.
+........................................................................
+
+[Finding 8] Dictionary-Based Password for 'privilege' (HIGH)
+ID:          PW-DICT-001
+Category:    Password Security
+Description: The password for user 'privilege' contains or matches a dictionary word.
+Impact:      Dictionary-based passwords can be cracked quickly with brute-force attacks.
+Recommend:   Use a random password with mixed case, numbers, and special characters.
+........................................................................
+
+[Finding 9] Weak Password for 'privilege' (MEDIUM)
+ID:          PW-WEAK-001
+Category:    Password Security
+Description: The password for user 'privilege' does not meet minimum strength requirements.
+Impact:      Weak passwords can be guessed or brute-forced.
+Recommend:   Set a password with minimum 8 characters, including upper/lowercase, numbers, and special characters.
+........................................................................
+
+[Finding 10] SNMP v2 Enabled (HIGH)
+ID:          SNMP-VER-001
+Category:    SNMP Security
+Description: SNMP v2 is configured on this device. SNMP v1/v2c transmit community strings in cleartext.
+Impact:      SNMP v1/v2 community strings can be intercepted, allowing unauthorized access to device configuration and data.
+Recommend:   Disable SNMP v1/v2 and use SNMP v3 with authentication and encryption.
+Fix:
+  no snmp-server community <community>
+  no snmp-server enable traps
+  snmp-server group <name> v3 priv
+  snmp-server user <user> <group> v3 auth sha <pass> priv aes 128 <pass>
+Reference:   CISCO-2002-03
+........................................................................
+
+[Finding 11] Default SNMP Community String (CRITICAL)
+ID:          SNMP-COM-001
+Category:    SNMP Security
+Description: A default SNMP community string 'private' is configured.
+Impact:      Default community strings are publicly known and provide unrestricted access.
+Recommend:   Change community strings to complex, unique values or migrate to SNMPv3.
+Fix:
+  no snmp-server community public
+  no snmp-server community private
+........................................................................
+
+[Finding 12] No SNMP Access Control List (MEDIUM)
+ID:          SNMP-ACL-001
+Category:    SNMP Security
+Description: No ACL is configured to restrict SNMP access.
+Impact:      Any host can query the device via SNMP.
+Recommend:   Apply an ACL to restrict SNMP access to authorized management stations.
+........................................................................
+
+[Finding 13] Missing Deny-All Rule in 100 (MEDIUM)
+ID:          ACL-DENY-001
+Category:    ACL Security
+Description: ACL '100' does not end with a deny-all rule.
+Impact:      Without a deny-all rule, traffic not explicitly matched may be permitted.
+Recommend:   Add 'deny ip any any log' as the last rule in the ACL.
+........................................................................
+
+[Finding 14] Missing Deny-All Rule in 100 (MEDIUM)
+ID:          ACL-DENY-001
+Category:    ACL Security
+Description: ACL '100' does not end with a deny-all rule.
+Impact:      Without a deny-all rule, traffic not explicitly matched may be permitted.
+Recommend:   Add 'deny ip any any log' as the last rule in the ACL.
+........................................................................
+
+[Finding 15] Missing Deny-All Rule in 100 (MEDIUM)
+ID:          ACL-DENY-001
+Category:    ACL Security
+Description: ACL '100' does not end with a deny-all rule.
+Impact:      Without a deny-all rule, traffic not explicitly matched may be permitted.
+Recommend:   Add 'deny ip any any log' as the last rule in the ACL.
+........................................................................
+
+[Finding 16] Missing Deny-All Rule in INTERNAL (MEDIUM)
+ID:          ACL-DENY-001
+Category:    ACL Security
+Description: ACL 'INTERNAL' does not end with a deny-all rule.
+Impact:      Without a deny-all rule, traffic not explicitly matched may be permitted.
+Recommend:   Add 'deny ip any any log' as the last rule in the ACL.
+........................................................................
+
+[Finding 17] IP Source Routing Enabled (HIGH)
+ID:          GEN-SR-001
+Category:    General Security
+Description: IP source route processing is enabled on this device.
+Impact:      Source routing can be used to bypass access controls and routing policies.
+Recommend:   Disable source routing: 'no ip source-route'.
+Fix:
+  no ip source-route
+........................................................................
+
+[Finding 18] Enable Password (Not Secret) Configured (MEDIUM)
+ID:          GEN-ENP-001
+Category:    General Security
+Description: The device uses 'enable password' instead of 'enable secret'.
+Impact:      Enable password is weakly obfuscated and can be decoded.
+Recommend:   Use 'enable secret' with a strong password instead.
+Fix:
+  no enable password
+  enable secret <strong-password>
+........................................................................
+
+[Finding 19] No ACL on Edge Interface GigabitEthernet0/0 (MEDIUM)
+ID:          IF-NOACL-GigabitEthernet0/0
+Category:    Interface Security
+Description: No access control list is applied to edge interface GigabitEthernet0/0.
+........................................................................
+
+[Finding 20] No ACL on Edge Interface FastEthernet0/1 (MEDIUM)
+ID:          IF-NOACL-FastEthernet0/1
+Category:    Interface Security
+Description: No access control list is applied to edge interface FastEthernet0/1.
+........................................................................
+
+[Finding 21] No ACL on Edge Interface Serial0/0 (MEDIUM)
+ID:          IF-NOACL-Serial0/0
+Category:    Interface Security
+Description: No access control list is applied to edge interface Serial0/0.
+........................................................................
+
+[Finding 22] SSH Not Enabled (MEDIUM)
+ID:          SSH-DIS-001
+Category:    SSH Security
+Description: SSH is not enabled on this device, potentially requiring Telnet for remote management.
+........................................................................
+
+[Finding 23] Low Console Logging Level (LOW)
+ID:          LOG-CON-001
+Category:    Logging Security
+Description: Console logging level is 0, which may miss important security events.
+........................................................................
+
+[Finding 24] No Logging Source Interface (INFORMATIONAL)
+ID:          LOG-SRC-001
+Category:    Logging Security
+Description: No logging source interface is configured.
+........................................................................
+
+[Finding 25] NTP Authentication Not Enabled (MEDIUM)
+ID:          NTP-AUTH-001
+Category:    NTP Security
+Description: NTP authentication is not enabled, allowing unauthorized time synchronization.
+Recommend:   Enable NTP authentication: 'ntp authenticate'.
+........................................................................
+
+[Finding 26] AAA 'New Model' Not Enabled (MEDIUM)
+ID:          AAA-NEW-001
+Category:    AAA Security
+Description: The 'aaa new-model' command is not enabled. Legacy authentication methods are in use.
+Recommend:   Enable AAA: 'aaa new-model' and configure TACACS+ or RADIUS.
+........................................................................
+
+[Finding 27] No Banner Configured (LOW)
+ID:          BAN-EMP-001
+Category:    Banner Security
+Description: No login banner is configured on this device.
+Impact:      Without a legal banner, unauthorized access may not be legally actionable.
+Recommend:   Configure a legal warning banner.
+Fix:
+  banner motd #Unauthorized access prohibited#
+........................................................................
+
+========================================================================
+END OF REPORT
+========================================================================

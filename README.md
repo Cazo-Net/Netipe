@@ -36,6 +36,22 @@ go build -o netpipe ./cmd/netpipe/
 sudo cp netpipe /usr/local/bin/
 ```
 
+### Windows (PowerShell)
+
+```powershell
+# Build and install
+cd D:\Projects\netpipe
+go install ./cmd/netpipe/
+
+# Add ~\go\bin to PATH (one-time)
+[Environment]::SetEnvironmentVariable("Path",
+  [Environment]::GetEnvironmentVariable("Path","User") +
+  ";$env:USERPROFILE\go\bin", "User")
+
+# Verify
+netpipe --version
+```
+
 ## Quick Start
 
 ```bash
