@@ -30,8 +30,8 @@ echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc
 Or build from source:
 
 ```bash
-git clone https://github.com/Cazo-Net/Netipe.git
-cd Netipe
+git clone https://github.com/Cazo-Net/NetPipe.git
+cd NetPipe
 go build -o netpipe ./cmd/netpipe/
 sudo cp netpipe /usr/local/bin/
 ```
