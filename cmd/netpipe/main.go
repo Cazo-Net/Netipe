@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/netpipe/netpipe/internal/config"
-	netpipe "github.com/netpipe/netpipe/pkg"
+	"github.com/Cazo-Net/netpipe/internal/config"
+	netpipe "github.com/Cazo-Net/netpipe/pkg"
 )
 
 func main() {

@@ -17,13 +17,13 @@ Network Infrastructure Configuration Parser and Security Auditor
 ## Install
 
 ```bash
-go install github.com/netpipe/netpipe/cmd/netpipe@latest
+go install github.com/Cazo-Net/netpipe/cmd/netpipe@latest
 ```
 
 Or build from source:
 
 ```bash
-git clone https://github.com/netpipe/netpipe.git
+git clone https://github.com/Cazo-Net/netpipe.git
 cd netpipe
 go build -o netpipe ./cmd/netpipe/
 ```

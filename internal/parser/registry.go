@@ -5,7 +5,7 @@ import (
 	"io"
 	"sort"
 
-	"github.com/netpipe/netpipe/internal/model"
+	"github.com/Cazo-Net/netpipe/internal/model"
 )
 
 type DeviceParser interface {

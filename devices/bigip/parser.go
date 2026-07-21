@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/netpipe/netpipe/internal/model"
-	"github.com/netpipe/netpipe/internal/parser"
+	"github.com/Cazo-Net/netpipe/internal/model"
+	"github.com/Cazo-Net/netpipe/internal/parser"
 )
 
 func init() {

@@ -9,9 +9,9 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/netpipe/netpipe/internal/audit"
-	"github.com/netpipe/netpipe/internal/config"
-	"github.com/netpipe/netpipe/internal/model"
+	"github.com/Cazo-Net/netpipe/internal/audit"
+	"github.com/Cazo-Net/netpipe/internal/config"
+	"github.com/Cazo-Net/netpipe/internal/model"
 )
 
 type ReportData struct {

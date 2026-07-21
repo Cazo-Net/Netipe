@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/netpipe/netpipe/internal/config"
-	"github.com/netpipe/netpipe/internal/model"
-	"github.com/netpipe/netpipe/internal/util"
+	"github.com/Cazo-Net/netpipe/internal/config"
+	"github.com/Cazo-Net/netpipe/internal/model"
+	"github.com/Cazo-Net/netpipe/internal/util"
 )
 
 type Finding struct {
